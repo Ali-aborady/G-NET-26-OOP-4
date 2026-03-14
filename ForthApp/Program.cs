@@ -25,6 +25,16 @@ namespace ForthApp
 
             #endregion
 
+            #region Q2: Overloading vs. Overriding
+            //Method Overloading:-
+            //Method Overloading occurs within the same class. It allows you to use the same method name multiple times,
+            //provided that each version has a different "signature" (different number or types of parameters).
+
+            //Method Overriding:-
+            //Method Overriding occurs between a Superclass(Parent) and a Subclass(Child).It happens when a child class provides 
+            //specific implementation for a method that is already defined in its parent class.
+
+            #endregion
 
 
 
