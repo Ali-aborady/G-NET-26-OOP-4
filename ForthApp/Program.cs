@@ -11,6 +11,21 @@ namespace ForthApp
         static void Main(string[] args)
         {
 
+            #region Q1 — Static Binding vs Dynamic Binding
+            //Binding is the process of linking a function call to the actual code(method body) that should execute.
+
+            //Static Binding(Early Binding): The compiler determines which method to call at compile time.
+            //This happens with static, private, or final methods because they cannot be changed by subclasses.
+            //It is generally faster because the decision is made before the program even starts.
+
+
+            //Dynamic Binding(Late Binding): The program determines which method to call at runtime.
+            //This happens when a method is overridden in a subclass. The computer looks at the actual object type
+            //(not just the variable type) during execution to find the right version of the method.
+
+            #endregion
+
+
 
 
         }
