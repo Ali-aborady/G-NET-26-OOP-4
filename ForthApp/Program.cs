@@ -52,6 +52,58 @@ namespace ForthApp
 
             #endregion
 
+            #region Part 2:Practical: Movie Ticket Booking System
+            //a) Create Cinema and open it
+            Cinema cinema = new Cinema("Grand Cinema");
+            cinema.OpenCinema();
+
+            //b) Create one of each ticket type
+            StandardTicket standard = new StandardTicket(
+                movieName: "Avengers",
+                price: 150m,
+                seatNumber: "B5"
+            );
+
+            VIPTicket vip = new VIPTicket(
+                movieName: "Inception",
+                price: 300m,
+                loungeAccess: true
+            );
+
+            IMAXTicket imax = new IMAXTicket(
+                movieName: "Dune",
+                price: 200m,
+                is3D: true       
+            );
+
+            //c) Test BOTH versions of SetPrice (overloading)
+            Console.WriteLine("\n=== Testing SetPrice Overloads ===");
+
+            // Version 1: set directly
+            standard.SetPrice(180m);
+
+            // Version 2: base × multiplier
+            standard.SetPrice(100m, 1.8m);    // 100 × 1.8 = 180
+
+            //Add tickets to Cinema
+            cinema.AddTicket(standard);
+            cinema.AddTicket(vip);
+            cinema.AddTicket(imax);
+
+            //d) Print all tickets (dynamic binding in action)
+            cinema.PrintAllTickets();
+
+            //e) ProcessTicket — polymorphism via parameter
+            TicketProcessor.ProcessTicket(vip);
+
+            //Total tickets 
+            Console.WriteLine($"\n  Total Tickets Created: {Ticket.GetTotalTickets()}");
+
+            //f) Close Cinema 
+            cinema.CloseCinema();
+
+            #endregion
+
 
         }
     }
