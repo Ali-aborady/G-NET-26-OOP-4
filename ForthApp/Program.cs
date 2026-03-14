@@ -36,6 +36,21 @@ namespace ForthApp
 
             #endregion
 
+            #region Q3: Keywords for Method Overriding
+
+            //1. virtual
+            //Used in the base class (the parent). It tells the compiler, "Hey, I expect my children to change this method later. Use dynamic binding for this."
+
+            //2. override
+            //Used in the derived class (the child). It explicitly states, "I am intentionally replacing a method from my parent." In Java, it’s written as @Override.This is a safety net; if you make a typo in the method name, the compiler will yell at you instead of letting you create a brand new, unrelated method.
+
+            //3. super or base
+            //Used inside the child's method to call the parent's version of that same method. It’s useful when you want to add to the parent's logic rather than completely replacing it.
+
+            //4. final or sealed
+            //The "stop" button.If you label a method with this, no subclass is allowed to override it.It locks the implementation.
+
+            #endregion
 
 
         }
